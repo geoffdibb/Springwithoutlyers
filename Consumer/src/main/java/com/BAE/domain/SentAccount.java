@@ -9,17 +9,20 @@ public class SentAccount {
     private String lastName;
 
     private String accountNumber;
+
+	private String prizewinner;
     
     
 
     public SentAccount(){}
 
-    public SentAccount(Long accountID, String firstNAme, String lastName, String accountNumber ){
+    public SentAccount(Long accountID, String firstName, String lastName, String accountNumber, String prizewinner) {
         this.accountId = accountID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.accountNumber = accountNumber;
-    }
+		this.prizewinner = prizewinner;
+				}
 
     
 
@@ -55,6 +58,12 @@ public class SentAccount {
         this.accountNumber = accountNumber;
     }
 
+    public String getprizewinner() {
+        return prizewinner;
+    }
 
+    public void setprizewinner(String prizewinner) {
+        this.prizewinner = prizewinner;
+    }
 
 }

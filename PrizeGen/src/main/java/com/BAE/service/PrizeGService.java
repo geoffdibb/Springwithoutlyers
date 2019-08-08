@@ -9,7 +9,7 @@ import org.springframework.http.ResponseEntity;
 
 public interface PrizeGService {
 
-	 ResponseEntity<String> createPrizeG( );
+	 ResponseEntity<String> createPrizeG(String exchangeAccount);
 
 
 

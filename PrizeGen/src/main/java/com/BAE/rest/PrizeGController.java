@@ -8,6 +8,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,10 +33,10 @@ public class PrizeGController {
 		public PrizeGService service;
 
 
-		@GetMapping(value = "/getPrize")
-		public ResponseEntity<String>  createPrizeG() {
+		@GetMapping(value = "/getPrize/{exchangeAccount}")
+		public ResponseEntity<String>  createPrizeG(@PathVariable("exchangeAccount") String exchangeAccount) {
 		
-			return service.createPrizeG();
+			return service.createPrizeG(exchangeAccount);
 		}
 
 
